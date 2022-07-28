@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مرسول</title>
+
+    <!-- styles -->
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../webfonts/stylesheet.css">
+    <link rel="stylesheet" href="../css/dataTables.bootstrap4.min.css">    
+    <link rel="stylesheet" href="../css/statics.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- <link rel="stylesheet" href="../css/styles_en.css"> -->
+
+
+</head>
+<body class="direction">
+    
+
+    
+
+    <!-- start sidebar -->
+
+
+    <nav class="dashboard-sidebar white-bg ">
+        <div class="side-logo  mb-3">
+            <div class="row align-items-center" >
+                <div class="col p-0">
+                    <a href="index.html">
+                        <button style="width: 50px;" class="dashboard-button p-1 material-button">
+                            <img src="../imgs/logo.png" class="sm-img " alt="">
+                        </button>
+                    </a>
+                </div>
+                <div class="col-9 side-button-content ">
+                    <h6 class=" mb-0"> احمد سمير</h6>
+                    <span class=" font10 d-block color-gray mb-0">لوحة تحكم المطعم</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="sideButtons" class=" d-lg-none"></div>
+
+        <!-- start side links -->
+        <div class="side-buttons">
+            <div>
+                <ul>
+                    <li class="side-button material-button  p-1 round5 mt-1">
+                        <a class="color-gray" href="index.html">
+                            <button class=" dashboard-button color-gray"><i class="fa fa-home"></i></button>
+                            <div class="side-button-content">
+                                <span class="font12 ml-2 mr-2">الرئيسية</span>
+                                <i class="fa fa-angle-left y180"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="side-button material-button p-1 round5 mt-1">
+                        <a class="color-gray" href="branches.html">
+                            <button class=" dashboard-button color-gray"><i class="fa fa-store"></i></button>
+                            <div class="side-button-content">
+                                <span class="font12 ml-2 mr-2"> المنتجات</span>
+                                <i class="fa fa-angle-left y180"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="side-button material-button p-1 round5 mt-1">
+                        <a class="color-gray" href="menu-categories.html">
+                            <button class=" dashboard-button color-gray"><i class="fa fa-th-large"></i></button>
+                            <div class="side-button-content">
+                                <span class="font12 ml-2 mr-2">نوع الكسر</span>
+                                <i class="fa fa-angle-left y180"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="side-button material-button p-1 round5 mt-1">
+                        <a class="color-gray" href="products.html">
+                            <button class=" dashboard-button color-gray"><i class="fa fa-boxes"></i></button>
+                            <div class="side-button-content">
+                                <span class="font12 ml-2 mr-2">طلباتي</span>
+                                <i class="fa fa-angle-left y180"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="side-button material-button p-1 round5 mt-1">
+                        <a class="color-gray" href="products-additions-categories.html">
+                            <button class=" dashboard-button color-gray"><i class="fa fa-th"></i></button>
+                            <div class="side-button-content">
+                                <span class="font12 ml-2 mr-2">التقارير</span>
+                                <i class="fa fa-angle-left y180"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="side-button material-button p-1 round5 mt-1">
+                        <a onclick="oppenSideDropDown(this)" class="color-gray drop-toggler d-block" href="#">
+                            <button class=" dashboard-button color-gray"><i class="fa fa-clipboard-list"></i></button>
+                            <div class="side-button-content">
+                                <span class="font12 ml-2 mr-2">طلباتى</span>
+                                <i class="fa fa-angle-left arrow y180"></i>
+                            </div>
+                        </a>
+                        <ul class="side-dropdown">
+                            
+                            <li class=" side-drop-button  p-1 round5 mt-1">
+                                <a class="color-gray" href="new-orders.html">
+                                    <button class=" color-gray"><i class="far fa-plus-square"></i></button>
+                                    <div class="side-button-content">
+                                        <span class="font12 ml-2 mr-2">الطلبات الجديدية</span>
+                                        <i class="fa fa-angle-left y180"></i>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class=" side-drop-button  p-1 round5 mt-1">
+                                <a class="color-gray" href="active-orders.html">
+                                    <button class=" color-gray"><i class="fa fa-hourglass-end"></i></button>
+                                    <div class="side-button-content">
+                                        <span class="font12 ml-2 mr-2">الطلبات النشطة</span>
+                                        <i class="fa fa-angle-left y180"></i>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="side-drop-button   p-1 round5 mt-1">
+                                <a class="color-gray" href="finished-orders.html">
+                                    <button class=" color-gray"><i class="fa fa-check-circle"></i></button>
+                                    <div class="side-button-content">
+                                        <span class="font12 ml-2 mr-2">الطلبات المكتملة</span>
+                                        <i class="fa fa-angle-left y180"></i>
+                                    </div>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li class="side-button material-button p-1 round5 mt-0">
+                        <a class="color-gray" href="finance.html">
+                            <button class=" dashboard-button color-gray"><i class="fa fa-money-bill"></i></button>
+                            <div class="side-button-content">
+                                <span class="font12 ml-2 mr-2">المالية</span>
+                                <i class="fa fa-angle-left y180"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="side-button material-button p-1 round5 mt-1">
+                            <a class="color-gray" href="edit-profile.html">
+                                <button class=" dashboard-button color-gray"><i class="fa fa-clipboard-list"></i></button>
+                                <div class="side-button-content">
+                                    <span class="font12 ml-2 mr-2">الاعدادات</span>
+                                    <i class="fa fa-angle-left arrow y180"></i>
+                                </div>
+                            </a>
+                    </li>
+                    <li class="side-button material-button active p-1 round5 mt-1">
+                        <a class="color-gray" href="reviews.html">
+                            <button class=" dashboard-button color-gray"><i class="far fa-comment-alt"></i></button>
+                            <div class="side-button-content">
+                                <span class="font12 ml-2 mr-2">التقييمات</span>
+                                <i class="fa fa-angle-left y180"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="side-button material-button  p-1 round5 mt-1">
+                        <a class="color-gray" href="contact-us.html">
+                            <button class=" dashboard-button color-gray"><i class="fa fa-phone-alt"></i></button>
+                            <div class="side-button-content">
+                                <span class="font12 ml-2 mr-2">تواصل معنا</span>
+                                <i class="fa fa-angle-left y180"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="side-button material-button p-1 round5 mt-1">
+                        <a class="color-gray" href="#">
+                            <button class=" dashboard-button color-gray"><i class="fa color-red fa-sign-out-alt"></i></button>
+                            <div class="side-button-content">
+                                <span class="font12 ml-2 mr-2">تسجيل الخروج</span>
+                                <i class="fa fa-angle-left  y180"></i>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- end side links -->
+
+        <div class="side-footer  font10">
+            <p  class="font10">جميع الحقوق محفوظة @2021</p>
+            <p class="font10"> 
+                تصميم بواسطة
+                <i class="fa fa-heart" style="color: #ff0000;"></i>
+                    <a href="https://aait.sa/" target="_blank" style="color: #000;">مؤسسة اوامر الشبكة</a>
+                </p>
+            
+        </div>
+
+    </nav>
+    <div class="side-overlay d-block d-lg-none" onclick="closeSide()"></div>
+
+
+    <!-- end sidebar -->
+
+
+    <div class="page-container ">
+
+        <!-- start of dashboard body -->
+        <div class="dashboard-body pb-3">
+
+             <!-- start navbar -->
+            <nav class="dashboard-nav  white-bg d-flex align-items-center">
+                <div class="nav-cont  align-items-center row w-100">
+                    <div class="col-md-8  pr-0 pl-0">
+                        <div class="row align-items-center ">
+                            <div class="col  pl-0 pr-0"><button class="dashboard-button material-button" id="sideToggler"><i class="fa font18 fa-outdent y180"></i></button></i></div>
+                             
+                        </div>
+                    </div>
+                    <div id="navButtons" class="col-lg d-none d-lg-block  pr-0 pl-0">
+                        <div class="row justify-content-end  align-items-center ">
+ 
+                            <a href="notification.html" class="nav-notifications ml-2 mr-2">
+                                <button class="dashboard-button  material-button">
+                                    <i class="far fa-bell"></i>
+                                </button>
+                                <span>3</span>
+                            </a>
+                            <div class="d-inline-block user-cont">
+                                <img src="../imgs/users/user.png" class="sm-img m-1" alt="">
+                                <div class="d-inline-block ">
+                                    <span class="bold font10 d-block mb-0"> احمد سمير</span>
+                                    <span class="bold font8 d-block mb-0">المدير العام</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- end navbar -->
+
+
+
+
+
+            <div class="dash-title p-2">
+                <h6 class="bold">الاشعارات</h6>
+                <p class="mb-1">يتم هنا عرض جميع الاشعارات الخاصة بك</p>
+            </div>
+
+
+
+                <!-- openions -->
+                <div class=" m-2 p-0 ">
+
+                    
+                    <div class="white-bg notification active m-2 round7 ">
+                        <div class="dash-card-content pl-2 pr-2">
+                            <div class="row m-0 pt-1 pb-1  align-items-center justify-content-center ">
+                                <div class="col-md p-0 icon-cont p-md-1 text-center ">
+                                    <div class="icon">
+                                        <i class="fa fa-bell"></i>
+                                    </div>
+                                </div>
+                                <div class="col-11 col-md-10 p-1 ">
+                                    <h6 class="bold font14">هذا النص هو مثال لنص يمكن ان يستبدل بنص اخر في نفس المساحة</h6>
+
+                                    <p class="mb-0"> 
+                                        <i class="far fa-clock"></i>
+                                        منذ 5 دقائق    
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="white-bg notification m-2  round7 ">
+                        <div class="dash-card-content pl-2 pr-2">
+                            <div class="row m-0 pt-1 pb-1  align-items-center justify-content-center ">
+                                <div class="col-md p-0 icon-cont p-md-1 text-center ">
+                                    <div class="icon">
+                                        <i class="fa fa-bell"></i>
+                                    </div>
+                                </div>
+                                <div class="col-11 col-md-10 p-1 ">
+                                    <h6 class="bold font14">هذا النص هو مثال لنص يمكن ان يستبدل بنص اخر في نفس المساحة</h6>
+
+                                    <p class="mb-0"> 
+                                        <i class="far fa-clock"></i>
+                                        منذ 5 دقائق    
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="white-bg notification m-2  round7 ">
+                        <div class="dash-card-content pl-2 pr-2">
+                            <div class="row m-0 pt-1 pb-1  align-items-center justify-content-center ">
+                                <div class="col-md p-0 icon-cont p-md-1 text-center ">
+                                    <div class="icon">
+                                        <i class="fa fa-bell"></i>
+                                    </div>
+                                </div>
+                                <div class="col-11 col-md-10 p-1 ">
+                                    <h6 class="bold font14">هذا النص هو مثال لنص يمكن ان يستبدل بنص اخر في نفس المساحة</h6>
+
+                                    <p class="mb-0"> 
+                                        <i class="far fa-clock"></i>
+                                        منذ 5 دقائق    
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                </div>
+
+            
+            
+
+
+        </div>
+        <!-- end of dashboard body -->
+
+    </div>
+
+
+
+    
+    
+
+
+    <!-- start page content -->
+
+    
+
+    <!-- end page content -->
+
+
+
+    <!-- scripts -->
+    <script src="../js/jquery-3.4.1.js" ></script>
+    <script src="../js/popper.js" ></script>
+    <script src="../js/bootstrap.min.js" ></script>
+    <script src="../js/jquery.dataTables.min.js" ></script>
+    <script src="../js/alerts.js" ></script>
+    <script src="../js/scripts.js" ></script>
+
+    
+</body>
+</html>
